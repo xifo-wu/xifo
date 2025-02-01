@@ -8,7 +8,14 @@ const withNextra = nextra({
 const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
-  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**.githubusercontent.com",
+      },
+    ],
+  },
 };
 
 export default withNextra(nextConfig);
